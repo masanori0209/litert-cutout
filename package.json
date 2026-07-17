@@ -1,0 +1,22 @@
+{
+  "name": "litert-cutout",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Browser-only background removal with LiteRT.js and U²-Net",
+  "scripts": {
+    "setup": "bash scripts/setup.sh",
+    "sync:wasm": "bash scripts/sync-wasm.sh",
+    "download:model": "bash scripts/download-model.sh",
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@litertjs/core": "^2.5.2"
+  },
+  "devDependencies": {
+    "typescript": "~6.0.2",
+    "vite": "^8.1.1"
+  }
+}
