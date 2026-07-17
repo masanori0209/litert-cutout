@@ -55,4 +55,4 @@ npm run dev
 ## 関連
 
 - LiteRT.js: https://ai.google.dev/edge/litert/web
-- Zenn 記事（公開後に追記）
+- Zenn 下書き: https://github.com/masanori0209/m-zenn-dev/blob/main/articles/litert-js-browser-cutout.md（公開後に URL を差し替え）
