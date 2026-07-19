@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.1.0",
   "type": "module",
-  "description": "Browser-only background removal with LiteRT.js and U²-Net",
+  "description": "Magic-eraser-like background cutout in the browser with LiteRT.js and U²-Net",
   "scripts": {
     "setup": "bash scripts/setup.sh",
     "sync:wasm": "bash scripts/sync-wasm.sh",

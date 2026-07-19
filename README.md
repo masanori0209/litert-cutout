@@ -1,13 +1,15 @@
 # litert-cutout
 
-ブラウザ内だけで背景を消す検証アプリです。  
+消しゴムマジックっぽい切り抜きを、ブラウザ内だけで試す検証アプリです。  
+中身は背景除去（被写体を残す saliency cutout）で、写り込み除去のインペイントではありません。
+
 [LiteRT.js](https://ai.google.dev/edge/litert/web) と、Hugging Face の [U²-Net LiteRT モデル](https://huggingface.co/litert-community/U-2-Net)（`.tflite`）を使います。
 
 画像ファイル自体はサーバーにアップロードしません（初回にモデルと Wasm を取得するだけです）。
 
 ## できること
 
-- プロフィール写真・商品写真っぽい切り抜きを、タブの中で試す
+- プロフィール写真・商品写真っぽい「背景を消す」体験を、タブの中で試す
 - `webgpu` / `wasm` の切り替え
 - 透明 PNG のダウンロード
 - 推論時間の表示（手元環境の参考値）
@@ -27,7 +29,7 @@ npm run dev
 2. `@litertjs/core` の Wasm を `public/wasm/` へ同期
 3. U²-Net（約 88MB）を `public/models/u2net_fp16.tflite` へ取得
 
-ブラウザで `http://localhost:5173` を開き、画像を選ぶか「サンプル画像」を押して「切り抜く」を実行します。
+ブラウザで `http://localhost:5173` を開き、画像を選ぶか「サンプル画像」を押して「消す」を実行します。
 
 ## 技術メモ
 
@@ -55,4 +57,4 @@ npm run dev
 ## 関連
 
 - LiteRT.js: https://ai.google.dev/edge/litert/web
-- Zenn 下書き: https://github.com/masanori0209/m-zenn-dev/blob/main/articles/litert-js-browser-cutout.md（公開後に URL を差し替え）
+- Zenn: https://zenn.dev/m2lab/articles/litert-js-browser-cutout
